@@ -1,0 +1,12 @@
+Your name: Konstantin Dimitrov
+Your student ID: 011196094
+Your major: CS
+Your preferred email address: 1dimitrovkonstantin@gmail.com
+Check one: [x] Undergraduate, [ ] Graduate, [ ] Open university 
+Repeating the class? [ ] Yes, [x] No
+Place and semester where you took a programming course in Java: SJSU Fall 2017 
+Course number and grade received: CS 49J A
+Place and semester where you took a course in data structures: SJSU Spring 2018
+Course number and grade received: CS 146 B+
+Time it took you to answer the two questions below: ~30 mins
+Did you ask anyone for help? [ ] Yes, [x] No
