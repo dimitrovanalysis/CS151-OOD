@@ -1,0 +1,46 @@
+What happens? Why? - There is a compiler error, we cannot convert from an Object to Person. the method clone from the type Object is not visible. 
+
+Add this to the Person class:
+public Person clone() { return (Person) super.clone(); }
+What happens when you compile? Why? - We get a compiler error, we are not supporting any exceptions! 
+
+Run the program. You should get an exception. Why?
+- We tried to clone an object that does not implement the clonable interface.
+
+Fix the exception by making Person implement the appropriate interface. Now your program should compile and run. What friends does cloneOfFred have? Why?
+- cloneOfFred has friends = Barney, because cloneOfFred has the same reference to fred even though it should be a different object.
+
+We don't want that behavior. Make it so that cloneOfFred has its own list of friends, by cloning the original list. How did you do that? Run the program again and verify that the program has been fixed. - modified the clone method in person to return a null clone and not just a copy of fred!
+
+Should we copy even more deeply? Suppose the clone method looks like this:
+- we are shown that cloneOfFred does not have the same friends that Fred has!
+
+
+SERIALIZABLE: 
+Which objects are contained in people.ser? Why?
+Fred, friends = Barney
+Barney, friends = Fred
+
+Fred is contained in people.ser, this is because we added it in during the beginning of the file
+A picture of fred is shown, but we do get a nonserializable exception afterwards once the program is terminated
+
+
+
+
+--------------------------------------------
+
+
+Lab answers:
+1. what does it print - 100
+2. n = 1000, what does it print? - 999937
+3. how many different Point objects are inserted? - we are only adding points with the point 1,1 - 1,0 - 0,1 - 0,0. total of 4 different point objects. - n/4
+4. Hashset creates hashes of the point set. each point set is a new hash in the hash set. Thats why it thinks we are getting many different points, because it only checks the hashes.
+
+What does it print? - 100
+How many different (i.e. not equal to another) Point2 objects are inserted in the set?
+-4 different points
+Explain why you are getting the wrong answer. (And don't just say "because we didn't implement the ... method".)
+-hashchode is different for points, even though they are technically the same
+Change n to 1000 and run the program again. Why does it seem to hang?
+- you have a double forloop aswell a trying 1000 different hashcode values that have to be differnt
+Fix Point2 to works correctly. Insert objects into the hash set as before. What count do you now get? 1Million
